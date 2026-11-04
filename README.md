@@ -108,13 +108,81 @@ Collection: devices
 Lưu ý: Không đưa file .env hoặc mật khẩu lên GitHub.
 
 
-### Frontend
 
-Sau khi hoàn thành Câu 4:
+### Hướng dẫn chạy Frontend
 
+Công nghệ:
+- React 19
+- Vite 8
+- JavaScript
+- CSS
+
+Yêu cầu:
+- Node.js 24
+- npm
+
+#### Cài đặt
+
+Di chuyển vào thư mục frontend:
+
+```bash
 cd frontend
+```
+
+Cài đặt thư viện:
+
+```bash
 npm install
+```
+
+Tạo file `.env.local` dựa trên `.env.example`.
+
+Cấu hình địa chỉ Backend API:
+
+```env
+VITE_API_URL=http://localhost:5000
+```
+
+Khởi chạy frontend:
+
+```bash
 npm run dev
+```
+
+Trên PowerShell có thể sử dụng:
+
+```powershell
+npm.cmd run dev
+```
+
+Mặc định frontend sử dụng cổng 5173. Nếu cổng
+đang được sử dụng, Vite có thể chọn cổng khác.
+
+#### Chức năng frontend
+
+- Hiển thị danh sách thiết bị từ MongoDB Atlas
+- Xem chi tiết thiết bị
+- Thêm thiết bị mới
+- Cập nhật thông tin thiết bị
+- Xóa thiết bị
+- Tìm kiếm thiết bị
+- Hiển thị tình trạng thiết bị
+- Hiển thị trạng thái tải dữ liệu
+- Thông báo thao tác thành công hoặc thất bại
+
+#### Kiểm thử
+
+```bash
+npm run build
+npm run lint
+```
+
+Địa chỉ Backend API được cấu hình thông qua
+biến môi trường VITE_API_URL.
+
+Khi triển khai lên Render, biến này phải được
+cập nhật thành URL backend công khai.
+
 
 Các lệnh chạy và biến môi trường sẽ được kiểm tra, cập nhật khi hoàn thiện mã nguồn.
 

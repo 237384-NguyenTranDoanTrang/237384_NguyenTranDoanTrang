@@ -52,13 +52,61 @@ Yêu cầu:
 - Git
 - MongoDB Atlas
 
-### Backend
 
-Sau khi hoàn thành Câu 3:
+### Chạy Backend
 
+Yêu cầu:
+- Node.js 24
+- npm
+- MongoDB Atlas
+
+Bước 1. Di chuyển vào thư mục backend:
+
+```bash
 cd backend
+```
+
+Bước 2. Cài đặt thư viện:
+
+```bash
 npm install
-npm start
+```
+
+Bước 3. Tạo file .env dựa trên .env.example.
+
+Cấu hình PORT và MONGODB_URI bằng thông tin
+MongoDB Atlas thực tế.
+
+Bước 4. Khởi chạy:
+
+```bash
+npm run dev
+```
+
+Trên PowerShell, có thể sử dụng npm.cmd run dev.
+
+### API Backend
+
+| Method | Endpoint | Chức năng |
+|---|---|---|
+| GET | /health | Kiểm tra backend và MongoDB |
+| GET | /api/devices | Danh sách thiết bị |
+| GET | /api/devices/:id | Chi tiết thiết bị |
+| POST | /api/devices | Thêm thiết bị |
+| PUT | /api/devices/:id | Cập nhật thiết bị |
+| DELETE | /api/devices/:id | Xóa thiết bị |
+| GET | /api/devices?search=... | Tìm kiếm thiết bị |
+
+Backend mặc định chạy tại:
+
+http://localhost:5000
+
+Database: 237384_NguyenTranDoanTrang
+
+Collection: devices
+
+Lưu ý: Không đưa file .env hoặc mật khẩu lên GitHub.
+
 
 ### Frontend
 

@@ -323,3 +323,39 @@ và sử dụng khi build ứng dụng React.
 - Hiển thị 3 thiết bị phòng học.
 - Thống kê: 2 đang sử dụng, 1 đang sửa chữa.
 - Không còn lỗi Failed to fetch.
+
+
+## Câu 8. Triển khai Backend lên Render
+
+### Cấu hình triển khai
+
+- Platform: Render
+- Service Type: Web Service
+- Service Name: api-237384
+- Runtime: Node.js
+- Branch: main
+- Root Directory: backend
+- Build Command: npm ci
+- Start Command: npm start
+
+### Environment Variables
+
+- NODE_ENV=production
+- PORT=5000 (nếu được cấu hình)
+- MONGODB_URI: cấu hình riêng trên Render
+
+Không lưu mật khẩu hoặc MongoDB URI vào GitHub.
+
+### Đường dẫn Backend
+
+- API: https://api-237384.onrender.com
+- Health: https://api-237384.onrender.com/health
+- Devices: https://api-237384.onrender.com/api/devices
+
+### Kết quả
+
+- Backend chạy thành công trên Render.
+- MongoDB Atlas kết nối thành công.
+- API /health trả về database connected.
+- Frontend trên Render lấy dữ liệu thành công.
+- Hệ thống hiển thị 3 thiết bị.

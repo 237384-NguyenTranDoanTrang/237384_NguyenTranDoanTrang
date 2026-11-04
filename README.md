@@ -216,6 +216,75 @@ MongoDB Atlas: Chưa cấu hình
 - Sử dụng biến môi trường để lưu MongoDB URI.
 - Không nhúng thông tin bí mật vào Docker image.
 
+## Câu 1. Tạo Repository và quản lý mã nguồn bằng GitHub
+
+- Repository: `237384_NguyenTranDoanTrang`
+- GitHub: https://github.com/237384-NguyenTranDoanTrang/237384_NguyenTranDoanTrang
+- Branch chính: `main`
+- Quản lý phiên bản mã nguồn bằng Git.
+- Thực hiện commit và push theo từng câu của đề thi.
+
+## Câu 2. Tạo cơ sở dữ liệu MongoDB Atlas
+
+- Nền tảng: MongoDB Atlas
+- Cluster: `Cluster0`
+- Database: `237384_NguyenTranDoanTrang`
+- Collection: `devices`
+
+Dữ liệu mẫu gồm:
+- `TB001` – Máy chiếu Epson – Phòng A101
+- `TB002` – Máy tính Dell – Phòng B202
+- `TB003` – Loa JBL – Phòng C303
+
+Cơ sở dữ liệu được kết nối với backend thông qua biến môi trường, không công khai thông tin đăng nhập.
+
+## Câu 3. Xây dựng Backend API
+
+**Công nghệ sử dụng:**
+- Node.js
+- Express
+- MongoDB Atlas
+- Mongoose
+- CORS
+- dotenv
+
+**Danh sách API:**
+
+| Phương thức | Endpoint | Chức năng |
+|---|---|---|
+| GET | `/health` | Kiểm tra trạng thái hệ thống |
+| GET | `/api/devices` | Lấy danh sách thiết bị |
+| GET | `/api/devices?search=...` | Tìm kiếm thiết bị |
+| GET | `/api/devices/:id` | Xem chi tiết thiết bị |
+| POST | `/api/devices` | Thêm thiết bị |
+| PUT | `/api/devices/:id` | Cập nhật thiết bị |
+| DELETE | `/api/devices/:id` | Xóa thiết bị |
+
+Backend hỗ trợ kiểm tra dữ liệu hợp lệ, xử lý mã thiết bị trùng lặp và trả về thông báo lỗi phù hợp.
+
+Backend Render: https://api-237384.onrender.com
+
+## Câu 4. Xây dựng Frontend bằng React
+
+**Công nghệ sử dụng:**
+- React
+- Vite
+- JavaScript
+- CSS
+- Fetch API
+
+**Chức năng:**
+- Hiển thị danh sách thiết bị.
+- Hiển thị thống kê theo tình trạng.
+- Tìm kiếm thiết bị.
+- Xem chi tiết thiết bị.
+- Thêm thiết bị mới.
+- Cập nhật thông tin thiết bị.
+- Xóa thiết bị.
+- Thông báo khi thao tác thành công hoặc thất bại.
+- Kết nối Backend API.
+
+Frontend Render: https://web-237384.onrender.com
 
 ## Câu 5. Đóng gói Backend bằng Docker
 

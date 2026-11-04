@@ -215,3 +215,34 @@ MongoDB Atlas: Chưa cấu hình
 - Không công khai mật khẩu và access token.
 - Sử dụng biến môi trường để lưu MongoDB URI.
 - Không nhúng thông tin bí mật vào Docker image.
+
+
+## Câu 5. Đóng gói Backend bằng Docker
+
+### Docker Hub
+- Repository: 237384nguyentrandoantrang/backend
+- Tag: latest
+- Link: https://hub.docker.com/r/237384nguyentrandoantrang/backend
+
+### Build Docker Image
+```bash
+cd backend
+docker build -t 237384nguyentrandoantrang/backend:latest .
+```
+
+### Chạy Container
+```bash
+docker run -d --name backend-237384 --env-file .env -p 5001:5000 237384nguyentrandoantrang/backend:latest
+```
+
+### Kiểm thử
+- Docker image build thành công.
+- Container backend chạy trên cổng 5000.
+- Máy chủ truy cập API qua cổng 5001.
+- MongoDB Atlas kết nối thành công.
+- GET /health trả về database connected.
+- GET /api/devices trả về 3 thiết bị.
+
+### Bảo mật
+- File .env không được đóng gói vào Docker image.
+- Các biến môi trường được truyền khi chạy container.

@@ -282,3 +282,44 @@ docker run -d --name frontend-237384 -p 8080:80 237384nguyentrandoantrang/fronte
 ### Lưu ý triển khai
 VITE_API_URL là biến môi trường sử dụng tại thời điểm build.
 Khi triển khai chính thức, cần build lại frontend với URL backend công khai.
+
+
+## Câu 7. Triển khai Frontend lên Render
+
+### Thông tin triển khai
+
+- Nền tảng: Render
+- Loại dịch vụ: Static Site
+- Tên dịch vụ: web-237384
+- Công nghệ: React, Vite
+- Branch: main
+- Root Directory: frontend
+- Build Command: npm ci && npm run build
+- Publish Directory: dist
+
+### Đường dẫn ứng dụng
+
+Frontend:
+https://web-237384.onrender.com
+
+Backend API:
+https://api-237384.onrender.com
+
+### Cấu hình môi trường
+
+Key: VITE_API_URL
+
+Value: https://api-237384.onrender.com
+
+Biến VITE_API_URL được cấu hình trên Render
+và sử dụng khi build ứng dụng React.
+
+### Kết quả kiểm thử
+
+- Frontend triển khai thành công.
+- Website hoạt động trên Render.
+- Kết nối Backend API thành công.
+- Lấy dữ liệu từ MongoDB Atlas thành công.
+- Hiển thị 3 thiết bị phòng học.
+- Thống kê: 2 đang sử dụng, 1 đang sửa chữa.
+- Không còn lỗi Failed to fetch.

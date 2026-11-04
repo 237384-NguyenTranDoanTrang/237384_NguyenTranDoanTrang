@@ -359,3 +359,54 @@ Không lưu mật khẩu hoặc MongoDB URI vào GitHub.
 - API /health trả về database connected.
 - Frontend trên Render lấy dữ liệu thành công.
 - Hệ thống hiển thị 3 thiết bị.
+
+
+## Câu 9. Kiểm thử tổng hợp và hoàn thiện hệ thống
+
+### Thông tin sinh viên
+- Họ tên: Nguyễn Trần Đoan Trang
+- MSSV: 237384
+- Môn: Điện toán đám mây
+- Đề tài: Hệ thống quản lý thiết bị phòng học
+
+### Đường dẫn bài thi
+
+**GitHub:**
+https://github.com/237384-NguyenTranDoanTrang/237384_NguyenTranDoanTrang
+
+**Frontend Render:**
+https://web-237384.onrender.com
+
+**Backend Render:**
+https://api-237384.onrender.com
+
+**Backend Health:**
+https://api-237384.onrender.com/health
+
+**Backend Devices API:**
+https://api-237384.onrender.com/api/devices
+
+**Docker Hub Backend:**
+https://hub.docker.com/r/237384nguyentrandoantrang/backend
+
+**Docker Hub Frontend:**
+https://hub.docker.com/r/237384nguyentrandoantrang/frontend
+
+### MongoDB Atlas
+- Cluster: Cluster0
+- Database: 237384_NguyenTranDoanTrang
+- Collection: devices
+
+### Kết quả kiểm thử
+
+- Frontend và backend triển khai thành công trên Render.
+- Backend kết nối thành công MongoDB Atlas.
+- API /health hoạt động.
+- API /api/devices trả về dữ liệu thiết bị.
+- Tìm kiếm, xem chi tiết, thêm, sửa, xóa thiết bị hoạt động.
+- Hai Docker image được lưu trên Docker Hub.
+- Mã nguồn và lịch sử commit được lưu trên GitHub.
+
+### Bảo mật
+Các thông tin bí mật được cấu hình bằng
+biến môi trường, không lưu trong GitHub.

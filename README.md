@@ -246,3 +246,39 @@ docker run -d --name backend-237384 --env-file .env -p 5001:5000 237384nguyentra
 ### Bảo mật
 - File .env không được đóng gói vào Docker image.
 - Các biến môi trường được truyền khi chạy container.
+
+
+## Câu 6. Đóng gói Frontend bằng Docker
+
+### Công nghệ
+- React
+- Vite
+- Docker Multi-stage Build
+- Node.js 24 Alpine
+- Nginx Alpine
+
+### Docker Hub
+- Repository: 237384nguyentrandoantrang/frontend
+- Tag: latest
+- Link: https://hub.docker.com/r/237384nguyentrandoantrang/frontend
+
+### Build image
+```bash
+cd frontend
+docker build --build-arg VITE_API_URL=http://localhost:5001 -t 237384nguyentrandoantrang/frontend:latest .
+```
+
+### Chạy container
+```bash
+docker run -d --name frontend-237384 -p 8080:80 237384nguyentrandoantrang/frontend:latest
+```
+
+### Kiểm thử
+- Frontend: http://localhost:8080
+- Health: http://localhost:8080/health
+- Backend API: http://localhost:5001/health
+- Hiển thị thành công 3 thiết bị từ MongoDB Atlas.
+
+### Lưu ý triển khai
+VITE_API_URL là biến môi trường sử dụng tại thời điểm build.
+Khi triển khai chính thức, cần build lại frontend với URL backend công khai.
